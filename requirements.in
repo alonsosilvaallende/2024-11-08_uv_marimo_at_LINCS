@@ -1,0 +1,8 @@
+jupyterlab
+jupyterlab_execute_time
+black
+isort
+ruff
+jupyterlab_code_formatter
+jupytext
+nbdime

@@ -1,0 +1,5 @@
+.envrc
+notebook.html
+notebook_files/
+.ipynb_checkpoints/
+output-jupyterlab.txt
