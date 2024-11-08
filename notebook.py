@@ -34,8 +34,10 @@
 # %% [markdown]
 # ##
 #
-# - Most of this reflection is coming from Trevor Manz
-# [JUV: Reproducible Jupyter Notebooks](https://github.com/manzt/juv)
+# ::: {.callout-note appearance="simple"}
+# Most of this reflection is coming from Trevor Manz in
+# [juv: Reproducible Jupyter Notebooks](https://github.com/manzt/juv)
+# :::
 
 # %% [markdown]
 # ##
@@ -89,16 +91,6 @@
 
 # %% [markdown]
 # ## Rethinking the *getting started*
-#
-# ```python
-# python -m venv venv
-# source venv/bin/activate
-# pip install -r requirements.txt # or just pip install pandas numpy, etc #
-# jupyter lab notebook.ipynb
-# ```
-
-# %% [markdown]
-# ## Rethinking the *getting started*
 # ---
 # code-annotations: select
 # ---
@@ -106,7 +98,7 @@
 # ```python
 # python -m venv venv # <1>
 # source venv/bin/activate # <2>
-# pip install -r requirements.txt # or just pip install numpy pandas, etc # <3>
+# python -m pip install -r requirements.txt # or just pip install numpy pandas.. # <3>
 # jupyter lab notebook.ipynb # <4>
 # ```
 # 1. Which python?
@@ -115,14 +107,14 @@
 # 4. Which jupyterlab? In which order of the cells?
 
 # %% [markdown]
-# ## The Gold Standard of the *getting started* is a *single command* (no furthur guidance needed)
+# ## The Gold Standard of the *getting started* is a *single command* (no furthur guidance required)
 #
 # ```python
 # <magic tool> notebook.ipynb
 # ```
 
 # %% [markdown]
-# ## The Gold Standard of the *getting started* is a *single command* (no furthur guidance needed)
+# ## The Gold Standard of the *getting started* is a *single command* (no furthur guidance required)
 #
 # ```python
 # <magic tool> notebook.ipynb
@@ -160,7 +152,7 @@
 # - ...
 #
 # ::: aside
-# [How Rust 🦀 is supercharging Python from the ground up](https://thedataquarry.com/posts/rust-is-supercharging-python/)
+# [How Rust 🦀 is supercharging Python from the ground up](https://thedataquarry.com/posts/rust-is-supercharging-python/) by Prashanth Rao
 # :::
 
 # %% [markdown]
@@ -191,9 +183,14 @@
 # %% [markdown]
 # ## Installation
 #
-# ### Standalone installer
+# - Standalone installer
 # ```shell
 # curl -LsSf https://astral.sh/uv/install.sh | sh
+# ```
+#
+# - PyPI
+# ```shell
+# pip install uv
 # ```
 
 # %% [markdown]
@@ -399,19 +396,19 @@
 # ```{.python filename="example.py"}
 # # /// script
 # # dependencies = [
-# #   "requests",
+# #   "numpy",
 # # ]
 # # [tool.uv]
 # # exclude-newer = "2024-11-07T00:00:00Z"
 # # ///
 #
-# import requests
+# import numpy
 #
-# print(requests.__version__)
+# print(numpy.__version__)
 # ```
 #
 # ```{.bash filename="Terminal"}
-# !/usr/bin/env -S uv run
+# #!/usr/bin/env -S uv run
 # ```
 
 # %% [markdown]
@@ -484,7 +481,7 @@
 #
 # ## Marimo notebooks are executable as a script {auto-animate=true}
 #
-# ```python
+# ```{.python filename="Marimo notebook"}
 # import marimo as mo
 #
 # name = mo.cli_args().get("name") or ""
@@ -496,9 +493,8 @@
 # ```
 
 # %% [markdown]
-# ## Marimo notebooks are git-friendly
-
-# %% [markdown]
+# ## Marimo notebooks are git-friendly {auto-animate=true}
+#
 # ```python
 # import numpy as np
 # import matplotlib.pyplot as plt
@@ -517,6 +513,33 @@
 # α = 1
 # plot(α)
 # ```
+#
+# ## Marimo notebooks are git-friendly {auto-animate=true}
+#
+# ```python
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# def plot(α):
+#     fig = plt.figure(figsize=(4, 5))
+#     xlim, ylim = [-np.pi, np.pi], [0, 10]
+#     x = np.linspace(*xlim)
+#     plt.plot(x, np.exp(x * α), label=r'$e^{\alpha x}$')
+#     plt.xlabel('$x$')
+#     plt.xlim(xlim)
+#     plt.ylim(ylim)
+#     plt.legend()
+#     plt.show()
+#
+# α = 2
+# plot(α)
+# ```
+
+# %% [markdown]
+# ## Jupyter notebooks can be git-friendly but require more effort
+#
+# - [Jupytext](https://jupytext.readthedocs.io/en/latest/)
+# - [nbdime](https://nbdime.readthedocs.io/en/latest/)
 
 # %% [markdown]
 # ## Reactive UI
