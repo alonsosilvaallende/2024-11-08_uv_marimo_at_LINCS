@@ -4,7 +4,7 @@ The **full title** of this presentation is **"uv: an extremely fast Python packa
 
 The **video recording** of the presentation will be available soon...
 
-The **notebook presented** can be found [here](https://github.com/alonsosilvaallende/2024-uv-marimo/blob/main/notebook.py).
+The **notebook presented** can be found [here](https://github.com/alonsosilvaallende/2024-11-08_uv_marimo_at_LINCS/blob/main/notebook.py).
 
 To run the notebook, install the `requirements.txt`:
 ```console
