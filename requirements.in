@@ -6,3 +6,5 @@ ruff
 jupyterlab_code_formatter
 jupytext
 nbdime
+numpy
+matplotlib
