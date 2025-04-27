@@ -2,7 +2,9 @@
 
 The **full title** of this presentation is **"uv: an extremely fast Python package and project manager & marimo notebooks: rethinking the notebook to create reproducible notebooks"**
 
-The **video recording** of the presentation will be available soon...
+The **video recording** of the presentation can be found here:
+
+[![Image of the title slide](http://img.youtube.com/vi/xm0WmijjNXE/0.jpg)](https://www.youtube.com/watch?v=xm0WmijjNXE).
 
 The **notebook presented** can be found [here](https://github.com/alonsosilvaallende/2024-11-08_uv_marimo_at_LINCS/blob/main/notebook.py).
 
